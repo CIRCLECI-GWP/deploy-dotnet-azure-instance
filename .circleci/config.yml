@@ -16,7 +16,7 @@ jobs:
           command: |
             docker build -t dockerdotnetcoreapi.azurecr.io/dotnet-api:latest .
             echo $DOCKER_PASS | docker login dockerdotnetcoreapi.azurecr.io -u $DOCKER_USER --password-stdin
-            docker push dotnetcoreapi.azurecr.io/dotnet-api:latest
+            docker push dockerdotnetcoreapi.azurecr.io/dotnet-api:latest
 workflows:
   build-and-deploy:
     jobs:
